@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# connect to server with ssh key in a specific folder
+ssh-keygen -f ./school -N betty
