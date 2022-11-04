@@ -22,6 +22,8 @@ config=\
         }
 }
 "
-echo "Holberton School" | sudo tee /var/www/html/index.html
-echo "$config" | sudo tee /etc/nginx/sites-available/default
+sudo chown -R "$USER":"$USER" /var/www/html/index.html
+sudo chown -R "$USER":"$USER" /etc/nginx/sites-available/default
+echo "Holberton School" > /var/www/html/index.html
+echo "$config" > /etc/nginx/sites-available/default
 sudo service nginx restart
