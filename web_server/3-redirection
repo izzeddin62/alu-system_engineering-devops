@@ -18,5 +18,6 @@ config=\
 }
 "
 sudo chown -R "$USER":"$USER" /etc/nginx/sites-available/default
+sudo echo "Holberton School" > /var/www/html/index.html
 echo "$config" > /etc/nginx/sites-available/default
 sudo service nginx restart
