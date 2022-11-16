@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # debug ngix server
+sudo apt-get update -y
+sudo apt-get install nginx -y
 first="listen\s[0-9]*?\sdefault_server;"
 second="listen 80 default_server;"
 start="listen\s\[::\]:[0-9]*?\sdefault_server;"
