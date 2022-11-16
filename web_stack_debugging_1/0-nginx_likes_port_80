@@ -4,5 +4,5 @@ sudo apt-get update -y
 sudo apt-get install nginx -y
 start="listen\s\[::\]:80\sdefault_server\sipv6only=on;"
 end="listen [::]:80 default_server;"
-sed -ri "s/$start/$end/" /etc/nginx/sites-available/default
+sudo sed -ri "s/$start/$end/" /etc/nginx/sites-available/default
 sudo service nginx start
