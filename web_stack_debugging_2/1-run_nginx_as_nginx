@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# debug nginx server
+sed -i "s/user\swww-data;/user nginx;" /etc/nginx/nginx.conf
+sudo service nginx restart
