@@ -10,5 +10,6 @@ sudo sed -ri "s/$start/$end/" /etc/nginx/sites-available/default
 sudo sed -ri "s/$first/$second/" /etc/nginx/sites-enabled/default
 sudo sed -ri "s/$start/$end/" /etc/nginx/sites-enabled/default
 chmod 777 /etc/nginx/nginx.conf
+chown nginx:nginx /etc/nginx/nginx.conf
 sudo service apache2 stop
 sudo -u	nginx service nginx restart
