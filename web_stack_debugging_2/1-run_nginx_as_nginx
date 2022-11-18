@@ -2,9 +2,9 @@
 # debug nginx server
 sed -i "s/user\swww-data;/user nginx;/" /etc/nginx/nginx.conf
 first="listen\s[0-9]*?\sdefault_server"
-second="listen 80 default_server"
+second="listen 8080 default_server"
 start="listen\s\[::\]:[0-9]*?\sdefault_server"
-end="listen [::]:80 default_server"
+end="listen [::]:8080 default_server"
 sudo sed -ri "s/$first/$second/" /etc/nginx/sites-available/default
 sudo sed -ri "s/$start/$end/" /etc/nginx/sites-available/default
 sudo sed -ri "s/$first/$second/" /etc/nginx/sites-enabled/default
