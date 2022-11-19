@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # debug nginx server
-sed -i "s/user\swww-data;/user nginx;/" /etc/nginx/nginx.conf
+sed -i 1d file /etc/nginx/nginx.conf
 first="listen\s[0-9]*?\sdefault_server"
 second="listen 8080 default_server"
 start="listen\s\[::\]:[0-9]*?\sdefault_server"
@@ -11,5 +11,9 @@ sudo sed -ri "s/$first/$second/" /etc/nginx/sites-enabled/default
 sudo sed -ri "s/$start/$end/" /etc/nginx/sites-enabled/default
 chmod 777 /etc/nginx/nginx.conf
 chown nginx:nginx /etc/nginx/nginx.conf
+chown nginx:nginx /var/log/nginx/error.log
+chown nginx:nginx /var/log/nginx/access.log
+touch /run/nginx.pid
+chown nginx:nginx /run/nginx.pid
 sudo service apache2 stop
 sudo -u	nginx service nginx restart
