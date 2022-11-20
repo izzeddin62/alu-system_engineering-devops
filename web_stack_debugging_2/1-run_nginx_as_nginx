@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # debug nginx server
 sed -i 1d file /etc/nginx/nginx.conf
-sudo sed -ri "s/[0-9]*?\sdefault_server/8080 default_server/" /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo sed -ri "s/[0-9]*?\sdefault_server/8080 default_server/" /etc/nginx/sites-available/default
+sudo sed -ri "s/[0-9]*?\sdefault_server/8080 default_server/" /etc/nginx/sites-enabled/default
 chmod 777 /etc/nginx/nginx.conf
 touch /run/nginx.pid
 chown nginx:nginx /etc/nginx/nginx.conf /var/log/nginx/error.log /var/log/nginx/access.log /run/nginx.pid
