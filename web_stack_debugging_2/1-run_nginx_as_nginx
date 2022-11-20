@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # debug nginx server
+sed -i 1d file /etc/nginx/nginx.conf
 sudo sed -ri "s/[0-9]*?\sdefault_server/8080 default_server/" /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 touch /run/nginx.pid
 chown -R nginx:nginx /etc/nginx/nginx.conf /var/log/nginx/ /run/nginx.pid /var/lib/nginx/
