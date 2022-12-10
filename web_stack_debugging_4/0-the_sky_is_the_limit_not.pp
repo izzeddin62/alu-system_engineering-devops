@@ -1,7 +1,7 @@
 # debug apache 500 server error
 
 exec {'nginx':
-    service => 'running'
+    ensure => 'running'
 }
 
 exec { 'new-state':
