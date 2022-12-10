@@ -1,6 +1,6 @@
 # debug apache 500 server error
 
-exec {'nginx':
+service {'nginx':
     ensure => 'running'
 }
 
